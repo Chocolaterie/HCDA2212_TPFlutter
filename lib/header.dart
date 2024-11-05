@@ -13,12 +13,9 @@ class HomePageHeader extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text(
-              "Nouveau",
-              style: TextStyle(color: Colors.white),
-            ),
+            IconButton(onPressed: () {}, icon: Image.asset("pencil.png", width: 26,)),
             Text("Accueil", style: TextStyle(color: Colors.white)),
-            Text("Rechercher", style: TextStyle(color: Colors.white)),
+            IconButton(onPressed: () {}, icon: Image.asset("search.png", width: 26,)),
           ],
         ),
       ),

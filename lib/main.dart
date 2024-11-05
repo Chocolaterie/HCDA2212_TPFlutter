@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tp_redwire/startup-splashscreen.dart';
 
 import 'home-page.dart';
+import 'login-page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      initialRoute: "/",
+      routes: {
+        "/" : (context) => StartupPage(),
+        '/login' : (context) => LoginPage(),
+      },
     );
   }
 }

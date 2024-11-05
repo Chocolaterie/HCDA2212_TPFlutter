@@ -24,7 +24,7 @@ class MessageCard extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: Column(
                     children: [
-                      Row( 
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [Text("iodqfojqsioid@gmail"), Text("56s", style: TextStyle(fontWeight: FontWeight.bold),)],
                       ),
@@ -47,9 +47,9 @@ class MessageCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text("Répondre", style: TextStyle(color: AppTheme.footerTextColor)),
-                Text("Retweet", style: TextStyle(color: AppTheme.footerTextColor)),
-                Text("Favoris", style: TextStyle(color: AppTheme.footerTextColor))
+                IconButton(onPressed: () {}, icon: Image.asset("reply.png", width: 26,)),
+                IconButton(onPressed: () {}, icon: Image.asset("retweet.png", width: 26,)),
+                IconButton(onPressed: () {}, icon: Image.asset("favorite.png", width: 26,)),
               ],
             ),
           )
