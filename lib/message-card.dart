@@ -24,7 +24,7 @@ class MessageCard extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: Column(
                     children: [
-                      Row(
+                      Row( 
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [Text("iodqfojqsioid@gmail"), Text("56s", style: TextStyle(fontWeight: FontWeight.bold),)],
                       ),
