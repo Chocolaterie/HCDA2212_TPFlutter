@@ -11,6 +11,7 @@ class AppValidator {
       return "Le format de l'email est incorrect";
     }
 
+    return null;
   }
 
   static String? validatePassword(String? value){
