@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-
-import 'app-theme.dart';
+import 'message.dart';
 
 class MessageCard extends StatelessWidget {
+
+  Message message;
+
+  MessageCard(this.message);
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -14,7 +18,7 @@ class MessageCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 child: Image.network(
-                  "https://avatar.iran.liara.run/public",
+                  message.profile,
                   width: 96,
                 ),
               ),
@@ -26,12 +30,12 @@ class MessageCard extends StatelessWidget {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [Text("iodqfojqsioid@gmail"), Text("56s", style: TextStyle(fontWeight: FontWeight.bold),)],
+                        children: [Text(message.author), Text(message.formatDuration(), style: TextStyle(fontWeight: FontWeight.bold),)],
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                         child: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+                          message.message,
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
                         ),

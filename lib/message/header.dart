@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'app-theme.dart';
+import '../app-theme.dart';
 
 class HomePageHeader extends StatelessWidget {
   @override

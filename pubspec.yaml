@@ -38,6 +38,8 @@ dependencies:
 
   gif: ^2.3.0
   video_player: ^2.9.2
+  email_validator: ^3.0.0
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
