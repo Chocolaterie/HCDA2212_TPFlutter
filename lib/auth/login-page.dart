@@ -12,6 +12,7 @@ class LoginPage extends StatelessWidget {
       // Changer de page
       Navigator.pushNamed(context, "/message");
     }
+
   }
 
   @override
