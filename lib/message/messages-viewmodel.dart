@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sn_progress_dialog/progress_dialog.dart';
+import 'package:tp_redwire/app-dialog-helpers.dart';
 
 import 'message.dart';
 import 'dart:convert' as convert;
@@ -13,13 +14,7 @@ class MessagesViewModel with ChangeNotifier {
   void callApi(BuildContext context) async {
 
     // Affiche l'ecran de chargement
-    var pd = ProgressDialog(context: context);
-    pd.show(
-      msg: "Récupération des messages...",
-      barrierColor: Color(0x77000000),
-      progressBgColor: Colors.transparent,
-      elevation: 10.0
-    );
+    AppDialogHelper.showProgressDialog(context, "Récupération des messages...");
 
     // Simuler 1 second d'attente
     await Future.delayed(Duration(seconds: 1));
@@ -40,7 +35,7 @@ class MessagesViewModel with ChangeNotifier {
         .toList());
 
     // Fermer l'ecran de chargement
-    pd.close();
+    AppDialogHelper.closeProgressDialog();
 
     notifyListeners();
   }
