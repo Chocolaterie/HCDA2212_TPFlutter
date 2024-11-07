@@ -24,14 +24,9 @@ class LoginPage extends StatelessWidget {
   }
 
   void onSubmit(BuildContext context){
-    /*
     if (_key.currentState!.validate()){
-      // Changer de page
-      Navigator.pushNamed(context, "/message");
+      callApi(context);
     }
-    */
-    callApi(context);
-
   }
 
   @override
